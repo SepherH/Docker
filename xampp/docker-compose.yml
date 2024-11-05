@@ -8,6 +8,7 @@ services:
       - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/lampp/bin
     volumes:
       - $XAMPP_HTDOCS:/opt/lampp/htdocs
+      - $XMAPP_MYSQL_DATA:/opt/lampp/var/mysql
     networks:
       - npm_bridge
 
