@@ -1,0 +1,16 @@
+services:
+  xampp:
+    image: tomsik68/xampp
+    restart: always
+    tty: true
+    stdin_open: true
+    environment:
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/lampp/bin
+    volumes:
+      - $XAMPP_HTDOCS:/opt/lampp/htdocs
+    networks:
+      - npm_bridge
+
+networks:
+  npm_bridge:
+    external: true
