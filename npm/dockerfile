@@ -1,0 +1,10 @@
+FROM jc21/nginx-proxy-manager:latest
+RUN apt update
+RUN apt upgrade -y
+RUN apt install iputils-ping -y
+RUN apt install net-tools -y
+RUN apt install nmap -y
+RUN apt install curl -y
+RUN apt install htop -y
+RUN apt install vim -y
+RUN curl https://logdy.dev/install.sh | sh

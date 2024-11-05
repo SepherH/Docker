@@ -1,0 +1,21 @@
+services:
+  npm:
+    build: .
+    restart: always
+    tty: true
+    stdin_open: true
+    networks:
+      macvlan:
+        ipv4_address: $NPM_MACVLAN_IP
+      npm_bridge:
+    environment:
+      - TZ=Asia/Taipei # 設定時區
+    volumes:
+      - $NPM_DATA:/data
+      - $NPM_LETSENCRYPT:/etc/letsencrypt
+
+networks:
+  macvlan:
+    external: true
+  npm_bridge:
+    external: true
