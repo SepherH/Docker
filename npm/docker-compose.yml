@@ -1,6 +1,6 @@
 services:
   npm:
-    build: .
+    image: jc21/nginx-proxy-manager:latest
     restart: always
     tty: true
     stdin_open: true
