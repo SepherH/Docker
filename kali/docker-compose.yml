@@ -1,0 +1,12 @@
+services:
+  xampp:
+    image: kalilinux/kali-rolling
+    restart: always
+    tty: true
+    stdin_open: true
+    networks:
+      - npm_bridge
+
+networks:
+  npm_bridge:
+    external: true
