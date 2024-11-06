@@ -1,0 +1,22 @@
+services:
+  mariadb:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - $DB_DATA:/var/lib/mysql
+    networks:
+      - npm_bridge
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    environment:
+      - PMA_ARBITRARY=1
+    networks:
+      - npm_bridge
+
+networks:
+  npm_bridge:
+    external: true
