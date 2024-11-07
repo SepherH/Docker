@@ -9,13 +9,13 @@ services:
     networks:
       - npm_bridge
 
-  # phpmyadmin:
-  #   image: phpmyadmin
-  #   restart: always
-  #   environment:
-  #     - PMA_HOST=mariadb-mariadb-1
-  #   networks:
-  #     - npm_bridge
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    environment:
+      - PMA_HOST=mariadb-mariadb-1
+    networks:
+      - npm_bridge
 
 networks:
   npm_bridge:
