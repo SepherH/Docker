@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  adh_1:
+    image: adguard/adguardhome
+    restart: always
+    volumes:
+      - /volume1/docker/adguardhome/1/confdir:/opt/adguardhome/conf
+      - /volume1/docker/adguardhome/1/workdir:/opt/adguardhome/work
+    networks:
+      - npm_bridge
+
+  adh_2:
+    image: adguard/adguardhome
+    restart: always
+    volumes:
+      - /volume1/docker/adguardhome/2/confdir:/opt/adguardhome/conf
+      - /volume1/docker/adguardhome/2/workdir:/opt/adguardhome/work
+    networks:
+      - npm_bridge
+
+networks:
+  npm_bridge:
+    external: true
