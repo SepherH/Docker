@@ -14,6 +14,7 @@ services:
     restart: always
     environment:
       - PMA_HOST=mariadb-mariadb-1
+      - UPLOAD_LIMIT=100M
     networks:
       - npm_bridge
 
