@@ -1,0 +1,12 @@
+services:
+  wordpress:
+    image: wordpress:latest
+    restart: always
+    volumes:
+      - $WP_HTML:/var/www/html
+    networks:
+      - npm_bridge
+
+networks:
+  npm_bridge:
+    external: true
