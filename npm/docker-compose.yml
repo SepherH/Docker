@@ -7,7 +7,7 @@ services:
     networks:
       macvlan:
         ipv4_address: $NPM_MACVLAN_IP
-      # npm_bridge:
+      npm_bridge:
     environment:
       - TZ=Asia/Taipei # 設定時區
     volumes:
@@ -17,5 +17,5 @@ services:
 networks:
   macvlan:
     external: true
-  # npm_bridge:
-  #   external: true
+  npm_bridge:
+    external: true

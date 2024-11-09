@@ -3,12 +3,12 @@ services:
     image: linuxserver/plex
     restart: always
     networks:
-      - macvlan
+      - npm_bridge
     volumes:
       - /volume1/docker/plex/config:/config
       - /volume1/docker/plex/movies:/movies
       - /volume1/docker/plex/tv:/tv
 
 networks:
-  macvlan:
+  npm_bridge:
     external: true

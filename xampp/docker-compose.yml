@@ -10,11 +10,8 @@ services:
       - $XAMPP_HTDOCS:/opt/lampp/htdocs
       # - $XMAPP_MYSQL_DATA:/opt/lampp/var/mysql
     networks:
-      - macvlan
-      # - npm_bridge
+      - npm_bridge
 
 networks:
-  macvlan:
+  npm_bridge:
     external: true
-  # npm_bridge:
-  #   external: true
