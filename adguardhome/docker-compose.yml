@@ -9,7 +9,7 @@ services:
       - /volume1/docker/adguardhome/1/workdir:/opt/adguardhome/work
     networks:
       - macvlan
-      - npm_bridge
+      # - npm_bridge
 
   adh_2:
     image: adguard/adguardhome
@@ -19,10 +19,10 @@ services:
       - /volume1/docker/adguardhome/2/workdir:/opt/adguardhome/work
     networks:
       - macvlan
-      - npm_bridge
+      # - npm_bridge
 
 networks:
   macvlan:
     external: true
-  npm_bridge:
-    external: true
+  # npm_bridge:
+  #   external: true

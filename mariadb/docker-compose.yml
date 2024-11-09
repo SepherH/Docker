@@ -8,7 +8,7 @@ services:
       - $DB_DATA:/var/lib/mysql
     networks:
       - macvlan
-      - npm_bridge
+      # - npm_bridge
 
   phpmyadmin:
     image: phpmyadmin
@@ -18,10 +18,10 @@ services:
       - UPLOAD_LIMIT=100M
     networks:
       - macvlan
-      - npm_bridge
+      # - npm_bridge
 
 networks:
   macvlan:
     external: true
-  npm_bridge:
-    external: true
+  # npm_bridge:
+  #   external: true
