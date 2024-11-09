@@ -5,8 +5,11 @@ services:
     volumes:
       - $WP_HTML:/var/www/html
     networks:
-      - npm_bridge
+      # - npm_bridge
+      - macvlan
 
 networks:
-  npm_bridge:
+  macvlan:
     external: true
+  # npm_bridge:
+  #   external: true
