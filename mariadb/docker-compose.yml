@@ -7,6 +7,7 @@ services:
     volumes:
       - $DB_DATA:/var/lib/mysql
     networks:
+      - macvlan
       - npm_bridge
 
   phpmyadmin:
@@ -16,8 +17,11 @@ services:
       - PMA_HOST=mariadb-mariadb-1
       - UPLOAD_LIMIT=100M
     networks:
+      - macvlan
       - npm_bridge
 
 networks:
+  macvlan:
+    external: true
   npm_bridge:
     external: true
