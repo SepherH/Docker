@@ -1,0 +1,12 @@
+services:
+  grafana:
+    image: grafana/grafana
+    restart: always
+    volumes:
+      - /volume1/docker/grafana:/var/lib/grafana
+    networks:
+      - macvlan
+
+networks:
+  macvlan:
+    external: true
