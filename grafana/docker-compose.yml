@@ -7,6 +7,14 @@ services:
     networks:
       - npm_bridge
 
+  loki:
+    image: grafana/loki
+    restart: always
+    volumes:
+      - /volume1/docker/grafana/loki:/loki
+    networks:
+      - npm_bridge
+
 networks:
   npm_bridge:
     external: true
