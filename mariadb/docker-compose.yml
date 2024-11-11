@@ -18,6 +18,12 @@ services:
     networks:
       - npm_bridge
 
+  game:
+    image: node
+    restart: always
+    networks:
+      - npm_bridge
+
 networks:
   npm_bridge:
     external: true

@@ -1,0 +1,12 @@
+services:
+  postman:
+    image: postman/newman
+    restart: always
+    volumes:
+      - 
+    networks:
+      - npm_bridge
+
+networks:
+  npm_bridge:
+    external: true
