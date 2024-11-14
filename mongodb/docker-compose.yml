@@ -10,7 +10,8 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
     networks:
-      - npm_bridge
+      - macvlan
+      # - npm_bridge
 
   mongo-express:
     image: mongo-express
@@ -21,8 +22,11 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
       ME_CONFIG_BASICAUTH: false
     networks:
-      - npm_bridge
+      - macvlan
+      # - npm_bridge
 
 networks:
-  npm_bridge:
+  macvlan:
     external: true
+  # npm_bridge:
+  #   external: true

@@ -5,8 +5,11 @@ services:
     volumes:
       - 
     networks:
-      - npm_bridge
+      - macvlan
+      # - npm_bridge
 
 networks:
-  npm_bridge:
+  macvlan:
     external: true
+  # npm_bridge:
+  #   external: true

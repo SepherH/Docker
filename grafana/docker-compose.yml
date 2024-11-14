@@ -5,7 +5,8 @@ services:
     volumes:
       - /volume1/docker/grafana/grafana:/var/lib/grafana
     networks:
-      - npm_bridge
+      - macvlan
+      # - npm_bridge
 
   loki:
     image: grafana/loki
@@ -13,8 +14,11 @@ services:
     volumes:
       - /volume1/docker/grafana/loki:/loki
     networks:
-      - npm_bridge
+      - macvlan
+      # - npm_bridge
 
 networks:
-  npm_bridge:
+  macvlan:
     external: true
+  # npm_bridge:
+  #   external: true
