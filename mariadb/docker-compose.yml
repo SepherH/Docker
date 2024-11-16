@@ -6,6 +6,10 @@ services:
       MARIADB_ROOT_PASSWORD: root
     volumes:
       - $DB_DATA:/var/lib/mysql
+    deploy:
+      resources:
+        limits:
+          cpus: "3"
     networks:
       - macvlan
       # - npm_bridge
