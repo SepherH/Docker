@@ -1,0 +1,19 @@
+services:
+  ghost:
+    image: ghost:latest
+    restart: always
+    environment:
+      # see https://ghost.org/docs/config/#configuration-options
+      database__client: mysql
+      database__connection__host: mariadb-mariadb-1
+      database__connection__user: ghost
+      database__connection__password: ghost
+      database__connection__database: ghost
+    volumes:
+      - /volume1/docker/ghost/content:/var/lib/ghost/content
+    networks:
+      - macvlan
+
+networks:
+  macvlan:
+    external: true
