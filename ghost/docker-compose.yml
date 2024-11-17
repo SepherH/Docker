@@ -9,6 +9,7 @@ services:
       database__connection__user: ghost
       database__connection__password: ghost
       database__connection__database: ghost
+      url: https://www.i23iv.cc
     volumes:
       - /volume1/docker/ghost/content:/var/lib/ghost/content
     networks:
