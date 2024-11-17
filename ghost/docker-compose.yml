@@ -4,6 +4,7 @@ services:
     restart: always
     environment:
       # see https://ghost.org/docs/config/#configuration-options
+      TZ: Asia/Taipei # 設定時區
       database__client: mysql
       database__connection__host: mariadb-mariadb-1
       database__connection__user: ghost
