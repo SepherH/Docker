@@ -1,0 +1,15 @@
+services:
+  syslog:
+    image: linuxserver/syslog-ng
+    restart: always
+    environment:
+      TZ: Asia/Taipei # 設定時區
+    networks:
+      - macvlan
+    volumes:
+      - /volume1/docker/syslog/config:/config
+      - /volume1/docker/syslog/log:/var/log
+
+networks:
+  macvlan:
+    external: true
