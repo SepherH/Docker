@@ -1,6 +1,6 @@
 services:
   qbittorrent:
-    image: linuxserver/qbittorrent
+    image: linuxserver/qbittorrent:4
     environment:
       TZ: Asia/Taipei # 設定時區
     volumes:
