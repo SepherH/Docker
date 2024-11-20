@@ -5,9 +5,8 @@ services:
     tty: true
     stdin_open: true
     networks:
-      macvlan:
-        ipv4_address: $NPM_MACVLAN_IP
-      # npm_bridge:
+      - npm
+        # ipv4_address: $NPM_MACVLAN_IP
     environment:
       - TZ=Asia/Taipei # 設定時區
     volumes:
@@ -15,7 +14,5 @@ services:
       - $NPM_LETSENCRYPT:/etc/letsencrypt
 
 networks:
-  macvlan:
+  npm:
     external: true
-  # npm_bridge:
-  #   external: true

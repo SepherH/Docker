@@ -11,8 +11,7 @@ services:
     #     limits:
     #       cpus: "3"
     networks:
-      - macvlan
-      # - npm_bridge
+      - npm
 
   phpmyadmin:
     image: phpmyadmin
@@ -21,11 +20,8 @@ services:
       - PMA_HOST=mariadb-mariadb-1
       - UPLOAD_LIMIT=100M
     networks:
-      - macvlan
-      # - npm_bridge
+      - npm
 
 networks:
-  macvlan:
+  npm:
     external: true
-  # npm_bridge:
-  #   external: true
