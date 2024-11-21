@@ -12,6 +12,7 @@ services:
     #       cpus: "3"
     networks:
       - npm
+      - macvlan
 
   phpmyadmin:
     image: phpmyadmin
@@ -21,7 +22,6 @@ services:
       - UPLOAD_LIMIT=100M
     networks:
       - npm
-      - macvlan
 
 networks:
   npm:
