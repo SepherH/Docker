@@ -12,12 +12,15 @@ services:
     #       cpus: "3"
     networks:
       - npm
+    ports:
+      - 3306:3306
 
   phpmyadmin:
     image: phpmyadmin
     restart: always
     environment:
-      - PMA_HOST=mariadb-mariadb-1
+      # - PMA_HOST=mariadb-mariadb-1
+      - PMA_HOST=127.0.0.1
       - UPLOAD_LIMIT=100M
     networks:
       - npm
