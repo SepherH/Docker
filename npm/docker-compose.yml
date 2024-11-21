@@ -7,7 +7,7 @@ services:
     networks:
       - npm
       - macvlan
-        # ipv4_address: $NPM_MACVLAN_IP
+        ipv4_address: 192.168.50.254
     ports:
       - 80:80
       - 81:81
