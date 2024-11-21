@@ -13,5 +13,5 @@ services:
       - npm
 
 networks:
-  macvlan:
+  npm:
     external: true
