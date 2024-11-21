@@ -6,6 +6,7 @@ services:
     stdin_open: true
     networks:
       - npm
+      - macvlan
         # ipv4_address: $NPM_MACVLAN_IP
     ports:
       - 80:80
@@ -19,4 +20,6 @@ services:
 
 networks:
   npm:
+    external: true
+  macvlan:
     external: true
