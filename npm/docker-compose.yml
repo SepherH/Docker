@@ -7,6 +7,10 @@ services:
     networks:
       - npm
         # ipv4_address: $NPM_MACVLAN_IP
+    ports:
+      - 80:80
+      - 81:81
+      - 443:443
     environment:
       - TZ=Asia/Taipei # 設定時區
     volumes:
