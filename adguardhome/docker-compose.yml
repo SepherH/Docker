@@ -5,7 +5,7 @@ services:
     volumes:
       - /volume1/docker/adguardhome/1/confdir:/opt/adguardhome/conf
       - /volume1/docker/adguardhome/1/workdir:/opt/adguardhome/work
-      - /docker/npm/letsencrypt/archive/npm-1:/opt/adguardhome/certs
+      - /volume1/docker/npm/letsencrypt/archive/npm-1:/opt/adguardhome/certs
     networks:
       - macvlan
       - npm
