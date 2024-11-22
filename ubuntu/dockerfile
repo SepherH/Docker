@@ -1,4 +1,5 @@
 FROM ubuntu
+RUN echo "Force cache bust at $CACHE_BUST" 
 RUN apt update
 RUN apt install nmap -y
 RUN apt install net-tools -y

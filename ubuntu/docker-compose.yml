@@ -1,6 +1,11 @@
 services:
   ubuntu:
-    build: .
+    build: 
+      context: .
+      dockerfile: dockerfile
+      args:
+        CACHE_BUST: "${CACHE_BUST:-$(date +%s)}"
+    image: ubuntu
     tty: true
     stdin_open: true
     restart: always
