@@ -1,0 +1,24 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome
+    restart: always
+    volumes:
+      - /volume1/docker/dns/adguardhome/confdir:/opt/adguardhome/conf
+      - /volume1/docker/dns/adguardhome/workdir:/opt/adguardhome/work
+      - /volume1/docker/npm/letsencrypt/archive/npm-1:/opt/adguardhome/certs
+    networks:
+      - macvlan
+      - npm
+  # dns-server:
+  #   image: technitium/dns-server
+  #   restart: always
+  #   volumes:
+  #   networks:
+  #     - macvlan
+  #     - npm
+
+networks:
+  macvlan:
+    external: true
+  npm:
+    external: true
