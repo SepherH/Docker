@@ -5,3 +5,5 @@ RUN apt upgrade -y
 RUN apt install nmap -y
 RUN apt install iputils-ping -y
 RUN apt-get install net-tools -y
+RUN apt install nodejs -y
+RUN apt install npm -y
