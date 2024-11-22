@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt update
-RUN apt upgrade
-RUN apt install nmap
-RUN apt install iputils-ping
-RUN apt-get install net-tools
+RUN apt upgrade -y
+RUN apt install nmap -y
+RUN apt install iputils-ping -y
+RUN apt-get install net-tools -y
