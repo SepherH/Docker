@@ -4,8 +4,8 @@ services:
   environment:
     TZ: Asia/Taipei
   networks:
-    npm:
-    macvlan:
+    - npm
+    - macvlan
   volumes:
 
 networks:
