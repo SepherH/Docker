@@ -3,7 +3,6 @@ services:
     build: 
       context: .
       dockerfile: dockerfile
-    image: ubuntu_node_20241122_2329
     tty: true
     stdin_open: true
     restart: always
