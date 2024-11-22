@@ -3,6 +3,7 @@ services:
     image: mariadb
     restart: always
     environment:
+      TZ: Asia/Taipei # 設定時區
       MARIADB_ROOT_PASSWORD: root
     volumes:
       - $DB_DATA:/var/lib/mysql
@@ -18,8 +19,9 @@ services:
     image: phpmyadmin
     restart: always
     environment:
-      - PMA_HOST=mariadb-mariadb-1
-      - UPLOAD_LIMIT=100M
+      TZ: Asia/Taipei # 設定時區
+      PMA_HOST: mariadb-mariadb-1
+      UPLOAD_LIMIT: 100M
     networks:
       - npm
 
