@@ -1,12 +1,13 @@
 services:
-  build: .
-  restart: always
-  environment:
-    TZ: Asia/Taipei
-  networks:
-    npm:
-    macvlan:
-  volumes:
+  ubuntu:
+    build: .
+    restart: always
+    environment:
+      TZ: Asia/Taipei
+    networks:
+      npm:
+      macvlan:
+    volumes:
 
 networks:
   npm:
