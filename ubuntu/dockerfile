@@ -1,6 +1,14 @@
-FROM ubuntu
-RUN echo "Force cache bust at $CACHE_BUST" 
-RUN apt update
-RUN apt install nmap -y
-RUN apt install net-tools -y
-RUN apt install iputils-ping -y
+FROM ubuntu:latest
+
+# 定義 ARG 參數
+ARG CACHE_BUST=none
+
+# 打印 CACHE_BUST 的值（可選）
+RUN echo "Force cache bust at $CACHE_BUST"
+
+# 更新系統套件並安裝所需的工具
+RUN apt update && apt install -y \
+    nmap \
+    net-tools \
+    iputils-ping \
+    && apt clean && rm -rf /var/lib/apt/lists/*
