@@ -7,7 +7,6 @@ services:
     networks:
       npm:
       macvlan:
-    volumes:
 
 networks:
   npm:
