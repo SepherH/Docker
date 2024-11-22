@@ -1,12 +1,5 @@
-FROM ubuntu:latest
+FROM ubuntu
 
-# 定義 ARG 參數
-ARG CACHE_BUST=none
-
-# 打印 CACHE_BUST 的值（可選）
-RUN echo "Force cache bust at $CACHE_BUST"
-
-# 更新系統套件並安裝所需的工具
 RUN apt update && apt install -y \
     nmap \
     net-tools \
