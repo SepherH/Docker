@@ -12,7 +12,8 @@ services:
     #     limits:
     #       cpus: "3"
     networks:
-      - macvlan
+      macvlan:
+        ipv4_address: 192.168.50.251
       # - npm
 
   phpmyadmin:
