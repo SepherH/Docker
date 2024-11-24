@@ -8,7 +8,7 @@ services:
       - /volume1/docker/npm/letsencrypt/archive/npm-1:/opt/adguardhome/certs
     networks:
       - npm
-      # - macvlan
+      - macvlan
   # dns-server:
   #   image: technitium/dns-server
   #   restart: always
@@ -20,5 +20,5 @@ services:
 networks:
   npm:
     external: true
-  # macvlan:
-  #   external: true
+  macvlan:
+    external: true
