@@ -13,7 +13,7 @@ services:
     #       cpus: "3"
     networks:
       - npm
-      - macvlan
+      # - macvlan
 
   phpmyadmin:
     image: phpmyadmin
@@ -28,5 +28,5 @@ services:
 networks:
   npm:
     external: true
-  macvlan:
-    external: true
+  # macvlan:
+  #   external: true
