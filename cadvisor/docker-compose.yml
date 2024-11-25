@@ -1,0 +1,12 @@
+services:
+  cadvisor:
+    image: google/cadvisor
+    restart: always
+    environment:
+      TZ: Asia/Taipei # 設定時區
+    networks:
+      - npm
+
+networks:
+  npm:
+    external: true
