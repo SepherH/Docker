@@ -12,9 +12,10 @@ services:
     #     limits:
     #       cpus: "3"
     networks:
-      macvlan:
-        ipv4_address: 192.168.50.251
-      npm:
+      - npm
+      # macvlan:
+      #   ipv4_address: 192.168.50.251
+      # npm:
 
   phpmyadmin:
     image: phpmyadmin
@@ -29,5 +30,5 @@ services:
 networks:
   npm:
     external: true
-  macvlan:
-    external: true
+  # macvlan:
+  #   external: true
