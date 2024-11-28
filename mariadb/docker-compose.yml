@@ -22,7 +22,8 @@ services:
     restart: always
     environment:
       TZ: Asia/Taipei # 設定時區
-      PMA_HOST: mariadb-mariadb-1
+      # PMA_HOST: mariadb-mariadb-1
+      PMA_HOST: i23iv.cc
       UPLOAD_LIMIT: 500M
     networks:
       - npm
