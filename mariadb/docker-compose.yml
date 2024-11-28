@@ -30,5 +30,5 @@ services:
 networks:
   macvlan:
     external: true
-  # npm:
-  #   external: true
+  npm:
+    external: true
