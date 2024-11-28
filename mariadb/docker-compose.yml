@@ -15,7 +15,7 @@ services:
       macvlan:
         ipv4_address: 192.168.50.251
       npm:
-      - npm
+      # - npm
 
   phpmyadmin:
     image: phpmyadmin
