@@ -5,8 +5,11 @@ services:
     environment:
       TZ: Asia/Taipei # 設定時區
     networks:
-      - npm
+      - macvlan
+      # - npm
 
 networks:
-  npm:
+  macvlan:
     external: true
+  # npm:
+  #   external: true

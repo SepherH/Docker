@@ -14,7 +14,7 @@ services:
     networks:
       macvlan:
         ipv4_address: 192.168.50.251
-      npm:
+      # npm:
 
   phpmyadmin:
     image: phpmyadmin
@@ -24,10 +24,11 @@ services:
       PMA_HOST: mariadb-mariadb-1
       UPLOAD_LIMIT: 500M
     networks:
-      - npm
+      - macvlan
+      # - npm
 
 networks:
   macvlan:
     external: true
-  npm:
-    external: true
+  # npm:
+  #   external: true
