@@ -6,7 +6,7 @@ services:
       TZ: Asia/Taipei # 設定時區
       MARIADB_ROOT_PASSWORD: root
     volumes:
-      - /volume1/docker/mariadb/mysql:/var/lib/mysql
+      - /volume1/docker/db/mariadb/mysql:/var/lib/mysql
     # deploy:
     #   resources:
     #     limits:
