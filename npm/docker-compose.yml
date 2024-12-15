@@ -6,8 +6,7 @@ services:
     stdin_open: true
     networks:
       macvlan:
-        ipv4_address: 192.168.50.250
-      # npm:
+        npm:
     ports:
       - 80:80
       - 81:81
@@ -19,7 +18,5 @@ services:
       - $NPM_LETSENCRYPT:/etc/letsencrypt
 
 networks:
-  macvlan:
+  npm:
     external: true
-  # npm:
-  #   external: true
