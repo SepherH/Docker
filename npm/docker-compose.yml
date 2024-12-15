@@ -5,8 +5,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      macvlan:
-        npm:
+      npm:
     ports:
       - 80:80
       - 81:81
