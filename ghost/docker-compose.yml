@@ -14,8 +14,8 @@ services:
     volumes:
       - /volume1/docker/ghost/content:/var/lib/ghost/content
     networks:
-      - npm
+      - macvlan
 
 networks:
-  npm:
+  macvlan:
     external: true
