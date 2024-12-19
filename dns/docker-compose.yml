@@ -10,8 +10,9 @@ services:
       - 53:53
       - 853:853
     networks:
-      npm:
+      macvlan:
+        ipv4_address: 192.168.50.251
 
 networks:
-  npm:
+  macvlan:
     external: true
