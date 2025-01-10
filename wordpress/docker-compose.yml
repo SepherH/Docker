@@ -3,13 +3,10 @@ services:
     image: wordpress:latest
     restart: always
     volumes:
-      - $WP_HTML:/var/www/html
+      - /volume1/docker/wordpress/html:/var/www/html
     networks:
       - macvlan
-      # - npm_bridge
 
 networks:
   macvlan:
     external: true
-  # npm_bridge:
-  #   external: true
