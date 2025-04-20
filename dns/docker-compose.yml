@@ -13,15 +13,6 @@ services:
       macvlan:
         ipv4_address: 192.168.50.251
 
-  unbound:
-    image: mvance/unbound
-    restart: always
-    volumes:
-      - /volume1/docker/dns/unbound/conf:/opt/unbound/etc/unbound
-    networks:
-      macvlan:
-        ipv4_address: 192.168.50.253
-
 networks:
   macvlan:
     external: true
