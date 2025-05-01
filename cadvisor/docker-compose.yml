@@ -5,11 +5,8 @@ services:
     environment:
       TZ: Asia/Taipei # 設定時區
     networks:
-      - macvlan
-      # - npm
+      - npm_bridge
 
 networks:
-  macvlan:
-    external: true
-  # npm:
-  #   external: true
+  npm_bridge:
+    driver: bridge

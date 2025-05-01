@@ -5,8 +5,7 @@ services:
     tty: true
     stdin_open: true
     networks:
-      macvlan:
-        ipv4_address: 192.168.50.250
+      - npm_bridge
 
     ports:
       - 80:80
@@ -19,5 +18,5 @@ services:
       - $NPM_LETSENCRYPT:/etc/letsencrypt
 
 networks:
-  macvlan:
-    external: true
+  npm_bridge:
+    driver: bridge

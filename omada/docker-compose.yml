@@ -28,9 +28,8 @@ services:
       - "29812:29812" # EAP 設備採用端口
       - "29813:29813" # EAP 設備升級端口
     networks:
-      macvlan:
-        ipv4_address: 192.168.50.241
+      - npm_bridge
 
 networks:
-  macvlan:
-    external: true
+  npm_bridge:
+    driver: bridge

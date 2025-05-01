@@ -34,8 +34,7 @@ services:
     image: thetorproject/obfs4-bridge:latest
     user: "1026:100"
     networks:
-      macvlan:
-        ipv4_address: 192.168.50.240
+      - npm_bridge
     environment:
       # Exit with an error message if OR_PORT is unset or empty.
       - OR_PORT=${OR_PORT:?Env var OR_PORT is not set.}
@@ -58,5 +57,5 @@ services:
     restart: unless-stopped
 
 networks:
-  macvlan:
-    external: true
+  npm_bridge:
+    driver: bridge

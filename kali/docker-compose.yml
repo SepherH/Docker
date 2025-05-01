@@ -5,11 +5,8 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - macvlan
-      # - npm_bridge
+      - npm_bridge
 
 networks:
-  macvlan:
-    external: true
-  # npm_bridge:
-  #   external: true
+  npm_bridge:
+    driver: bridge
