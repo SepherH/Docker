@@ -49,6 +49,7 @@ services:
       - .env
     volumes:
       - /volume1/docker/tor/data:/var/lib/tor
+      - /volume1/docker/tor/config:/etc/tor
     ports:
       - ${OR_PORT}:${OR_PORT}
       - ${PT_PORT}:${PT_PORT}
