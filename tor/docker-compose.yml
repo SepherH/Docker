@@ -32,7 +32,7 @@ version: "3.4"
 services:
   obfs4-bridge:
     image: thetorproject/obfs4-bridge:latest
-    user: "1026:1026"
+    user: "1026:100"
     networks:
       macvlan:
         ipv4_address: 192.168.50.240
