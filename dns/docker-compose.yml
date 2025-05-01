@@ -9,6 +9,7 @@ services:
     ports:
       - 53:53
       - 853:853
+      - 3000:3000
     networks:
       - npm_bridge
 
