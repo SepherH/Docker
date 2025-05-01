@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  omada-controller:
+    image: mbentley/omada-controller:latest
+    container_name: omada-controller
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Taipei
+      - MANAGE_HTTP_PORT=8088
+      - MANAGE_HTTPS_PORT=8043
+      - PORTAL_HTTP_PORT=8088
+      - PORTAL_HTTPS_PORT=8843
+      - SHOW_SERVER_LOGS=true
+      - SHOW_MONGODB_LOGS=false
+    volumes:
+      - /volume1/docker/omada/data:/opt/tplink/EAPController/data
+      - /volume1/docker/omada/logs:/opt/tplink/EAPController/logs
+      - /volume1/docker/omada/work:/opt/tplink/EAPController/work
+    ports:
+      - "8088:8088"   # 管理介面 HTTP 端口
+      - "8043:8043"   # 管理介面 HTTPS 端口
+      - "8843:8843"   # EAP 設備管理端口
+      - "29810:29810" # EAP 設備發現端口
+      - "29811:29811" # EAP 設備心跳端口
+      - "29812:29812" # EAP 設備採用端口
+      - "29813:29813" # EAP 設備升級端口
+    networks:
+      macvlan:
+        ipv4_address: 192.168.50.241
+
+networks:
+  macvlan:
+    external: true
