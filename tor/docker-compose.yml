@@ -54,6 +54,7 @@ services:
     ports:
       - ${OR_PORT}:${OR_PORT}
       - ${PT_PORT}:${PT_PORT}
+      - 9050:9050
     restart: unless-stopped
 
 networks:
