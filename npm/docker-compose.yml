@@ -6,7 +6,7 @@ services:
     stdin_open: true
     networks:
       - npm
-
+      - host
     ports:
       - 8080:80
       - 8181:81
@@ -18,5 +18,7 @@ services:
       - $NPM_LETSENCRYPT:/etc/letsencrypt
 
 networks:
+  host:
+    driver: host
   npm:
     external: true
