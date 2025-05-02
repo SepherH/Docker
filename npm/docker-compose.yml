@@ -6,6 +6,8 @@ services:
     stdin_open: true
     networks:
       - npm
+    dns:
+      - dns-adguardhome-1
     ports:
       - 8080:80
       - 8181:81
