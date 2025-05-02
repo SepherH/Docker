@@ -12,8 +12,6 @@ services:
       - 8443:443
     environment:
       - TZ=Asia/Taipei # 設定時區
-    extra_hosts:
-      - host.docker.internal:host-gateway
     volumes:
       - $NPM_DATA:/data
       - $NPM_LETSENCRYPT:/etc/letsencrypt
