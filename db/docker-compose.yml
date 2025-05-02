@@ -12,7 +12,7 @@ services:
     #     limits:
     #       cpus: "3"
     networks:
-      - npm_bridge
+      - npm
 
   phpmyadmin:
     image: phpmyadmin
