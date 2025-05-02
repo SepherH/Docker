@@ -6,11 +6,10 @@ services:
     stdin_open: true
     networks:
       - npm
-      - host
     ports:
-      - 80:80
-      - 81:81
-      - 443:443
+      - 8080:80
+      - 8181:81
+      - 8443:443
     environment:
       - TZ=Asia/Taipei # 設定時區
     volumes:
@@ -18,7 +17,5 @@ services:
       - $NPM_LETSENCRYPT:/etc/letsencrypt
 
 networks:
-  host:
-    driver: host
   npm:
     external: true
