@@ -4,14 +4,15 @@ services:
     restart: always
     tty: true
     stdin_open: true
+    network_mode: host
     networks:
       - npm
-    dns:
-      - 172.18.0.4
-    ports:
-      - 8080:80
-      - 8181:81
-      - 8443:443
+    # dns:
+    #   - 172.18.0.4
+    # ports:
+    #   - 8080:80
+    #   - 8181:81
+    #   - 8443:443
     environment:
       - TZ=Asia/Taipei # 設定時區
     volumes:
