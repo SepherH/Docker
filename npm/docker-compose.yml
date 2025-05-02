@@ -5,8 +5,8 @@ services:
     tty: true
     stdin_open: true
     network_mode: host
-    networks:
-      - npm
+    # networks:
+    #   - npm
     # dns:
     #   - 172.18.0.4
     # ports:
