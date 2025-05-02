@@ -11,8 +11,8 @@ services:
       - 853:853
       - 3000:3000
     networks:
-      - npm_bridge
+      - npm
 
 networks:
-  npm_bridge:
-    driver: bridge
+  npm:
+    external: true

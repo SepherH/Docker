@@ -5,8 +5,8 @@ services:
     volumes:
       - /volume1/docker/wordpress/html:/var/www/html
     networks:
-      - macvlan
+      - npm
 
 networks:
-  macvlan:
+  npm:
     external: true

@@ -22,8 +22,8 @@ services:
       PMA_HOST: db-mariadb-1
       UPLOAD_LIMIT: 500M
     networks:
-      - npm_bridge
+      - npm
 
 networks:
-  npm_bridge:
-    driver: bridge
+  npm:
+    external: true
