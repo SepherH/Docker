@@ -5,10 +5,10 @@ services:
     tty: true
     stdin_open: true
     network_mode: host
-    # ports:
-    #   - 8080:80
-    #   - 8181:81
-    #   - 8443:443
+    ports:
+      - 80:80
+      - 81:81
+      - 443:443
     environment:
       - TZ=Asia/Taipei # 設定時區
     extra_hosts:
