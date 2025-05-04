@@ -21,7 +21,8 @@ services:
     restart: always
     environment:
       TZ: Asia/Taipei # 設定時區
-      PMA_HOST: db-mariadb-1
+      # PMA_HOST: db-mariadb-1
+      PMA_HOSTS: db-mariadb-1,192.168.50.80
       UPLOAD_LIMIT: 500M
     networks:
       - npm
