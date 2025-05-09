@@ -10,9 +10,10 @@ services:
       - 53:53
       - 853:853
       - 3000:3000
-    networks:
-      - npm
+    network_mode: host  
+    # networks:
+    #   - npm
 
-networks:
-  npm:
-    external: true
+# networks:
+#   npm:
+#     external: true
