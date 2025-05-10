@@ -12,8 +12,6 @@ services:
   phpmyadmin:
     image: phpmyadmin
     restart: always
-    dns:
-      - host.docker.internal
     extra_hosts:
       - "host.docker.internal:host-gateway"
     environment:
