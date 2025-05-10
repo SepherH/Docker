@@ -8,14 +8,6 @@ services:
     volumes:
       - /volume1/docker/db/mariadb/mysql:/var/lib/mysql
     network_mode: host
-    # ports:
-    #   - 3306:3306
-    # deploy:
-    #   resources:
-    #     limits:
-    #       cpus: "3"
-    # networks:
-    #   - npm
 
   phpmyadmin:
     image: phpmyadmin
@@ -27,7 +19,6 @@ services:
     environment:
       TZ: Asia/Taipei # 設定時區
       PMA_HOST: host.docker.internal
-      # PMA_HOSTS: db-mariadb-1,192.168.50.80
       UPLOAD_LIMIT: 500M
     networks:
       - npm
