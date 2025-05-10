@@ -21,7 +21,9 @@ services:
     image: phpmyadmin
     restart: always
     dns:
-      - 192.168.50.80
+      - host.docker.internal
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       TZ: Asia/Taipei # 設定時區
       PMA_HOST: db.mysql.i23iv.cc
