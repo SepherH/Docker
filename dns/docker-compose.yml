@@ -13,6 +13,9 @@ services:
   docker:
     image: adguard/adguardhome
     restart: always
+    volumes:
+      - /volume1/docker/dns/docker/confdir:/opt/adguardhome/conf
+      - /volume1/docker/dns/docker/workdir:/opt/adguardhome/work
     extra_hosts:
       - "host.docker.internal:host-gateway"
     ports:
