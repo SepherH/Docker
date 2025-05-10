@@ -10,7 +10,7 @@ services:
     network_mode: host
 
   # 解析 docker namespace
-  npm:
+  docker:
     image: adguard/adguardhome
     restart: always
     ports:
