@@ -20,9 +20,11 @@ services:
   phpmyadmin:
     image: phpmyadmin
     restart: always
+    dns:
+      - 192.168.50.80
     environment:
       TZ: Asia/Taipei # 設定時區
-      PMA_HOST: 192.168.50.80
+      PMA_HOST: db.mysql.i23iv.cc
       # PMA_HOSTS: db-mariadb-1,192.168.50.80
       UPLOAD_LIMIT: 500M
     networks:
