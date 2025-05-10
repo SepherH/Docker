@@ -26,7 +26,7 @@ services:
       - "host.docker.internal:host-gateway"
     environment:
       TZ: Asia/Taipei # 設定時區
-      PMA_HOST: db.mysql.i23iv.cc
+      PMA_HOST: host.docker.internal
       # PMA_HOSTS: db-mariadb-1,192.168.50.80
       UPLOAD_LIMIT: 500M
     networks:
