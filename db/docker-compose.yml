@@ -7,22 +7,23 @@ services:
       MARIADB_ROOT_PASSWORD: root
     volumes:
       - /volume1/docker/db/mariadb/mysql:/var/lib/mysql
-    ports:
-      - 3306:3306
+    network_mode: host
+    # ports:
+    #   - 3306:3306
     # deploy:
     #   resources:
     #     limits:
     #       cpus: "3"
-    networks:
-      - npm
+    # networks:
+    #   - npm
 
   phpmyadmin:
     image: phpmyadmin
     restart: always
     environment:
       TZ: Asia/Taipei # 設定時區
-      # PMA_HOST: db-mariadb-1
-      PMA_HOSTS: db-mariadb-1,192.168.50.80
+      PMA_HOST: 192.168.50.80
+      # PMA_HOSTS: db-mariadb-1,192.168.50.80
       UPLOAD_LIMIT: 500M
     networks:
       - npm
