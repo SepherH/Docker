@@ -13,6 +13,8 @@ services:
   docker:
     image: adguard/adguardhome
     restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - 10000:53
       - 10001:3000
