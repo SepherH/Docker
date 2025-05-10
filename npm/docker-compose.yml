@@ -10,10 +10,10 @@ services:
       - 8080:80
       - 8181:81
       - 8443:443
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       - TZ=Asia/Taipei # 設定時區
-    extra_hosts:
-      - host.docker.internal:host-gateway
     volumes:
       - $NPM_DATA:/data
       - $NPM_LETSENCRYPT:/etc/letsencrypt
