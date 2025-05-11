@@ -4,8 +4,8 @@ services:
     restart: always
     extra_hosts:
       - host.docker.internal:host-gateway
-    dns:
-      - system
+    dns: []
+    dns_search: []
     volumes:
       - /volume1/docker/wordpress/html:/var/www/html
     networks:
