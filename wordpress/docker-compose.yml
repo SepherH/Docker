@@ -3,7 +3,7 @@ services:
     image: wordpress:latest
     restart: always
     dns:
-      - dns-docker-1
+      - host.docker.internal
     extra_hosts:
       - host.docker.internal:host-gateway
     volumes:
