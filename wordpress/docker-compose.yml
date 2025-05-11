@@ -2,10 +2,10 @@ services:
   wordpress:
     image: wordpress:latest
     restart: always
-    dns:
-      - host.docker.internal
     extra_hosts:
       - host.docker.internal:host-gateway
+    dns:
+      - host.docker.internal
     volumes:
       - /volume1/docker/wordpress/html:/var/www/html
     networks:
