@@ -4,3 +4,7 @@ services:
     restart: always
     networks:
       - npm
+
+networks:
+  npm:
+    external: true
