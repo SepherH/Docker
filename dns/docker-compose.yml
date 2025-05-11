@@ -26,4 +26,5 @@ services:
 
 networks:
   dns:
-    external: true
+    name: dns
+    driver: bridge
