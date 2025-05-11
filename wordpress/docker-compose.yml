@@ -5,7 +5,7 @@ services:
     extra_hosts:
       - host.docker.internal:host-gateway
     dns:
-      - host.docker.internal
+      - 172.18.0.1
     volumes:
       - /volume1/docker/wordpress/html:/var/www/html
     networks:
