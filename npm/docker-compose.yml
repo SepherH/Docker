@@ -7,16 +7,16 @@ services:
     networks:
       - npm
     ports:
-      - 8080:80
-      - 8181:81
-      - 8443:443
+      - 8080:80 # HTTP
+      - 8443:443 # HTTPS
+      - 8081:81 # Admin
     extra_hosts:
       - "host.docker.internal:host-gateway"
     environment:
       - TZ=Asia/Taipei # 設定時區
     volumes:
-      - $NPM_DATA:/data
-      - $NPM_LETSENCRYPT:/etc/letsencrypt
+      - /volume1/docker/npm/data:/data
+      - /volume1/docker/npm/letsencrypt:/etc/letsencrypt
 
 networks:
   npm:
