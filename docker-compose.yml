@@ -1,6 +1,5 @@
 services:
   test:
-    <<: *host
     image: adguard/adguardhome
     restart: always
     networks:
