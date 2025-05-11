@@ -1,6 +1,6 @@
 services:
   # 對外的 DNS 服務
-  adguardhome:
+  home:
     image: adguard/adguardhome
     restart: always
     volumes:
@@ -8,23 +8,3 @@ services:
       - /volume1/docker/dns/adguardhome/workdir:/opt/adguardhome/work
       - /volume1/docker/npm/letsencrypt/archive/npm-1:/opt/adguardhome/certs
     network_mode: host
-
-  # 解析 docker namespace
-  docker:
-    image: adguard/adguardhome
-    restart: always
-    volumes:
-      - /volume1/docker/dns/docker/confdir:/opt/adguardhome/conf
-      - /volume1/docker/dns/docker/workdir:/opt/adguardhome/work
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    ports:
-      - 10000:53
-      - 10001:3000
-    networks:
-      - dns
-
-networks:
-  dns:
-    name: dns
-    driver: bridge
