@@ -22,8 +22,8 @@ services:
       - 10000:53
       - 10001:3000
     networks:
-      - npm
+      - dns
 
 networks:
-  npm:
+  dns:
     external: true
