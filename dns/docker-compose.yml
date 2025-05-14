@@ -13,8 +13,6 @@ services:
   unbound:
     image: mvance/unbound
     restart: always
-    ports:
-      - 5353:53/udp
     volumes:
       - /volume1/docker/dns/unbound/conf:/etc/unbound
     networks:
