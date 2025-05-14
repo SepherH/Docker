@@ -9,16 +9,7 @@ services:
       - /volume1/docker/npm/letsencrypt/archive/npm-1:/opt/adguardhome/certs
     network_mode: host
 
-  # unbound
-  unbound:
-    image: unbound/unbound
-    restart: always
-    ports:
-      - 5353:53/udp
-    volumes:
-      - /volume1/docker/dns/unbound/conf:/etc/unbound
-    networks:
-      - npm
+  
 
 networks:
   npm:
