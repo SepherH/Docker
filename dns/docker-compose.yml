@@ -16,7 +16,7 @@ services:
     ports:
       - 5353:53
     volumes:
-      - /volume1/docker/dns/unbound/conf:/etc/unbound
+      - /volume1/docker/dns/unbound/conf:/opt/unbound/etc/unbound
     networks:
       - npm
 
