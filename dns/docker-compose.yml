@@ -12,6 +12,7 @@ services:
   # unbound
   unbound:
     image: mvance/unbound
+    user: "root:1000"  # 使用 _unbound 群組
     restart: always
     ports:
       - 5353:53
