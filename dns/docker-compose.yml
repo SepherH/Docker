@@ -13,7 +13,6 @@ services:
   unbound:
     image: mvance/unbound
     restart: always
-    user: "1026:1026"
     ports:
       - 5353:53
     volumes:
