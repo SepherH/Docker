@@ -17,4 +17,9 @@ services:
       - 5353:53
     volumes:
       - /volume1/docker/dns/unbound/conf:/opt/unbound/etc/unbound
-    network_mode: host
+    networks:
+      - npm
+
+networks:
+  npm:
+    external: true
