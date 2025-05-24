@@ -10,16 +10,15 @@ services:
     network_mode: host
 
   # unbound
-  # unbound:
-  #   image: mvance/unbound
-  #   user: "0:1000"  # 使用 _unbound 群組
-  #   restart: always
-  #   ports:
-  #     - 5353:53
-  #   volumes:
-  #     - /volume1/docker/dns/unbound/conf:/opt/unbound/etc/unbound
-  #   networks:
-  #     - npm
+  unbound:
+    image: mvance/unbound
+    restart: always
+    ports:
+      - 5353:53
+    volumes:
+      - /volume1/docker/dns/unbound/conf:/opt/unbound/etc/unbound
+    networks:
+      - npm
 
 networks:
   npm:
