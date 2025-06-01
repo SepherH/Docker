@@ -2,14 +2,14 @@ services:
   qbittorrent:
     image: linuxserver/qbittorrent
     environment:
-      TZ: Asia/Taipei # 設定時區
+      - TZ=Asia/Taipei # 設定時區
     volumes:
       - /volume1/docker/qbittorrent/config:/config
       - /volume1/downloader/qbittorrent:/downloads
     restart: always
     networks:
-      - macvlan
+      - npm
 
 networks:
-  macvlan:
+  npm:
     external: true
