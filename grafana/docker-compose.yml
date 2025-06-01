@@ -5,8 +5,8 @@ services:
     volumes:
       - /volume1/docker/grafana:/var/lib/grafana
     networks:
-      - npm_bridge
+      - npm
 
 networks:
-  npm_bridge:
-    driver: bridge
+  npm:
+    external: true
