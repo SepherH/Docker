@@ -9,8 +9,8 @@ services:
     environment:
       TZ: Asia/Taipei
     networks:
-      npm:
+      - macvlan
 
 networks:
-  npm:
+  macvlan:
     external: true
