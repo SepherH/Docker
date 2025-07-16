@@ -7,7 +7,10 @@ services:
       - /volume1/docker/dns/adguardhome/confdir:/opt/adguardhome/conf
       - /volume1/docker/dns/adguardhome/workdir:/opt/adguardhome/work
       - /volume1/docker/npm/letsencrypt/archive/npm-1:/opt/adguardhome/certs
-    network_mode: host
+    networks:
+      macvlan:
+        ipv4_address: 192.168.50.253
+
 
   # unbound
   # unbound:
@@ -21,5 +24,5 @@ services:
   #     - npm
 
 networks:
-  npm:
+  macvlan:
     external: true
