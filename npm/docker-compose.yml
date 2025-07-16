@@ -4,8 +4,6 @@ services:
     restart: always
     tty: true
     stdin_open: true
-    networks:
-      - npm
     ports:
       - 8080:80 # HTTP
       - 8443:443 # HTTPS
@@ -17,7 +15,10 @@ services:
     volumes:
       - /volume1/docker/npm/data:/data
       - /volume1/docker/npm/letsencrypt:/etc/letsencrypt
+    networks:
+      macvlan:
+        ipv4_address: 192.168.50.251
 
 networks:
-  npm:
+  macvlan:
     external: true
