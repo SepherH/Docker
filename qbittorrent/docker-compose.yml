@@ -8,8 +8,8 @@ services:
       - /volume1/downloader/qbittorrent:/downloads
     restart: always
     networks:
-      - npm
+      - macvlan
 
 networks:
-  npm:
+  macvlan:
     external: true
