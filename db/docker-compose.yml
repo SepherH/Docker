@@ -7,7 +7,8 @@ services:
       MARIADB_ROOT_PASSWORD: root
     volumes:
       - /volume1/docker/db/mariadb/mysql:/var/lib/mysql
-    network_mode: host
+    networks:
+      - macvlan
 
   phpmyadmin:
     image: phpmyadmin
@@ -19,8 +20,8 @@ services:
       PMA_HOST: host.docker.internal
       UPLOAD_LIMIT: 500M
     networks:
-      - npm
+      - macvlan
 
 networks:
-  npm:
+  macvlan:
     external: true
