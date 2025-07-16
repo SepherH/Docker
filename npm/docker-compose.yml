@@ -18,8 +18,6 @@ services:
     networks:
       macvlan:
         ipv4_address: 192.168.50.251
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
 
 networks:
   macvlan:
