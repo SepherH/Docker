@@ -1,0 +1,12 @@
+services:
+  whoogle:
+    image: benbusby/whoogle-search
+    container_name: whoogle
+    restart: always
+    networks:
+      - macvlan
+    
+networks:
+  macvlan:
+    external: true
+  
