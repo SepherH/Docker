@@ -20,6 +20,8 @@ services:
       - "5678:5678"
     volumes:
       - ${N8N_DATA}:/home/node/.n8n
+    networks:
+      - macvlan
 
 networks:
   macvlan:
