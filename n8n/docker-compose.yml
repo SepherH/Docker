@@ -4,6 +4,8 @@ services:
     image: n8nio/n8n
     container_name: n8n
     restart: always
+    tty: true
+    stdin_open: true
     environment:
       - DB_TYPE=mariadb
       - DB_MYSQLDB_HOST=${DB_MYSQLDB_HOST}
