@@ -23,7 +23,7 @@ services:
       - macvlan
 
   openmemory-ui:
-    image: mem0ai/openmemory-ui:latest
+    image: mem0/openmemory-ui:latest
     restart: always
     environment:
       - NEXT_PUBLIC_API_URL=https://omui.i23iv.cc
