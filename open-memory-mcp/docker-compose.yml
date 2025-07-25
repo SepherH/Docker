@@ -6,6 +6,8 @@ services:
       - "6333:6333"
     volumes:
       - /volume1/docker/open-memory-mcp/qdrant:/mem0/storage
+    networks:
+      - macvlan
 
   openmemory-mcp:
     image: mem0/openmemory-mcp:latest
