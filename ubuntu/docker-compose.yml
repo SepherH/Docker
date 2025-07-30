@@ -1,13 +1,13 @@
 services:
-  mem0:
+  ubuntu:
     build: 
       context: .
       dockerfile: dockerfile
     tty: true
     stdin_open: true
     restart: always
-    env_file:
-      - /volume1/docker/stack.env
+    environment:
+      TZ: Asia/Taipei
     networks:
       - macvlan
 
