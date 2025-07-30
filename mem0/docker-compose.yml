@@ -1,0 +1,16 @@
+services:
+  mem0:
+    build: 
+      context: .
+      dockerfile: dockerfile
+    tty: true
+    stdin_open: true
+    restart: always
+    env_file:
+      - /volume1/docker/stack.env
+    networks:
+      - macvlan
+
+networks:
+  macvlan:
+    external: true
